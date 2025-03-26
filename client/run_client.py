@@ -2,8 +2,7 @@ import requests
 import psutil
 from time import sleep
 
-TARGET_IP = "192.168.0.201" # 방장
-# TARGET_IP = "127.0.0.1" # 자신참조
+TARGET_IP = "127.0.0.1"
 API_URL = f"http://{TARGET_IP}:8000/cpu-monitor"
 
 while True:
@@ -14,3 +13,4 @@ while True:
     response = requests.post(API_URL, json=payload)
 
     print(f"Server response: {response.status_code}")
+
